@@ -1,4 +1,4 @@
-class RightDiaonal{
+class DiaonalStarPattern{
 
 public static void main(String[] args){
  int n = 11;

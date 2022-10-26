@@ -1,4 +1,4 @@
-class NestedForLoopDemo{
+class DiagonalPattern{
 
 public static void main(String[] args){
 

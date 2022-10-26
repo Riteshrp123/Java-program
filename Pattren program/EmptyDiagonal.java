@@ -1,4 +1,4 @@
-class NestedPattenDemo{
+class EmptyDiagonal{
 
 public static void main(String[] args){
 
