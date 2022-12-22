@@ -9,7 +9,7 @@ import com.xworkz.theaterRepository.TheaterRepoImpl;
 
 public class TheaterServiceImpl implements TheaterService{
      
-	TheaterDto dto = new TheaterDto();
+	
 	
 	TheaterRepo repo = new TheaterRepoImpl();
 	
@@ -28,34 +28,31 @@ public class TheaterServiceImpl implements TheaterService{
 	}
 
 	@Override
-	public boolean read(TheaterDto theaterdto) {
-		if(theaterdto!=null){
-			if(theaterdto.getName().length()>=3) {	
-		System.out.println("Theaterdto is read the data");
-		repo.read(dto);
-		return true;
-	}
-
-}
-		else {
-			System.out.println("Theater is not read the data");
+	public List<TheaterDto> read() {
+		System.out.println("All the data in theater read");
+		return repo.read();
 		}
-		return false;
-	}
 
 	@Override
-	public boolean findByName(String name) {
+	public  TheaterDto findByName(String name) {
 		if(name!=null) {
+			if(name.length()>=3)
 			 System.out.println("Theater name is valid");
-		 repo.findByName(name);
-		return true;
+		 TheaterDto dto = repo.findByName(name);
+		return dto;
 			
-}
-	else {
-		System.out.println("Theater name is not valid");
 	}
-		return false;
+		return null;
 		
 	}
+	@Override
+	public TheaterDto deleteByName(String name) {
+		if(name!=null) {
+			if(name.length()>=3) {
+		TheaterDto dto = repo.deleteByName(name);
+		return dto;
+	}
+		}
+		return null;
 }
-
+}

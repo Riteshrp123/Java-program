@@ -10,9 +10,7 @@ import com.xworkz.theaterService.TheaterServiceImpl;
 public class TheaterRunner {
 	public static void main(String[] args) {
 		
-
-  
-  TheaterService service = new  TheaterServiceImpl();
+ TheaterService service = new  TheaterServiceImpl();
   
   TheaterDto dto = new TheaterDto();
   
@@ -27,17 +25,18 @@ public class TheaterRunner {
      dto.setLift(true);
      dto.setNoOfGate(10);
      
-
-		 dto.setName("Gopalan");
-		  dto.setLocation("J.p nagar");
-		  dto.setParking(true);
-		 dto.setNoOfScreen(7);
-		 dto.setNoOfSeat(400);
-		 dto.setTicketPrice(200);
-		 dto.setServeAnyFood(true);
-		 dto.setType("4k");
-		 dto.setLift(true);
-		 dto.setNoOfGate(8);
+     TheaterDto dto1 = new TheaterDto();
+     
+         dto1.setName("Gopalan");
+         dto1.setLocation("J.p nagar");
+		 dto1.setParking(true);
+		 dto1.setNoOfScreen(7);
+		 dto1.setNoOfSeat(400);
+		 dto1.setTicketPrice(200);
+		 dto1.setServeAnyFood(true);
+		 dto1.setType("4k");
+		 dto1.setLift(true);
+		 dto1.setNoOfGate(8);
 		 
 		 TheaterDto dto3 = new TheaterDto();
 		 dto3.setName("Phonex");
@@ -50,6 +49,7 @@ public class TheaterRunner {
 		 dto3.setType("Imax");
 		 dto3.setLift(true);
 		 dto3.setNoOfGate(10);
+		 
 		 TheaterDto dto4 = new TheaterDto();
 		 dto4.setName("Shared");
 		 dto4.setLocation("Nagarathpete");
@@ -61,6 +61,7 @@ public class TheaterRunner {
 		 dto4.setType("2k");
 		 dto4.setLift(true);
 		 dto4.setNoOfGate(5);
+		 
 		 TheaterDto dto5 = new TheaterDto();
 		 dto5.setName("Balaji");
 		 dto5.setLocation("Balaji nagar");
@@ -84,8 +85,8 @@ public class TheaterRunner {
 		 TheaterDto dto14 = new TheaterDto("Triveni","Gandhinagar",5,"4k",true,150,true,true,250,4); 
 		 TheaterDto dto15 = new TheaterDto("Cineplexx","Keonjhar",2,"4k",true,200,true,true,350,3); 
 		 
-		 service.save(dto);
-		 service.save(dto); 
+		service.save(dto);
+		 service.save(dto1); 
 		 service.save(dto3); 
 		 service.save(dto4); 
 		 service.save(dto5);
@@ -98,13 +99,17 @@ public class TheaterRunner {
 		  service.save(dto12);
 		  service.save(dto13);
 		  service.save(dto14);
-		  service.save(dto15);
-		  
-     service.read(dto);
-     service.findByName("Vega_city");
-     
-     System.out.println(service.findByName("Vega_city"));
-     
-     }
-     }
-
+		  service.save(dto15); 
+		
+	 
+	 
+    List<TheaterDto> returned = service.read();
+   // TheaterDto dtos = service.findByName("Vega_city");
+   // TheaterDto dtor = service.deleteByName("Gopalan");
+   // System.out.println(service.findByName("Vega_city"));
+   //	 System.out.println(service.deleteByName("Gopalan"));
+   	 for(TheaterDto theater : returned) {
+   	System.out.println(theater); 
+   	 }
+}
+}

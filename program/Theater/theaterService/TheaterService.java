@@ -8,8 +8,12 @@ import com.xworkz.theater.TheaterDto;
 public interface TheaterService  {
     
 	public boolean save(TheaterDto theaterdto);
+
 	
-	public boolean read(TheaterDto theaterdto);
+	public TheaterDto findByName(String name);
+
+	public List<TheaterDto> read();
 	
-	public boolean findByName(String name);
+	public TheaterDto deleteByName(String name);
+
 }

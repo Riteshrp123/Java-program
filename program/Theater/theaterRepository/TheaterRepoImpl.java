@@ -12,24 +12,37 @@ public class TheaterRepoImpl implements TheaterRepo{
 	
 	@Override
 	public boolean save(TheaterDto theaterdto) {
+		System.out.println("Theater repo will came to database");
 	      list.add(theaterdto);
+		System.out.println("Theater data will be save");
 		return true;
 	
 	}
 
 	@Override
-	public boolean read(TheaterDto TheaterDto) {
-		list.add(TheaterDto);
-		return true;
+	public List<TheaterDto> read() {
+	     return list;
 	}
 
-	public  Object findByName(String name){
+	public  TheaterDto findByName(String name){
 		for(TheaterDto dto : list) {
 			if(dto.getName().equals(name)){
-				System.out.println(dto);
-				return dto;
+				System.out.println("Theater name is there");
+			return dto;
 		}
+} 
+		return null;		
 }
-		return name;
-}
+
+	@Override
+	public TheaterDto deleteByName(String name) {
+	for(TheaterDto dto : list) {
+		if(dto.getName().equals(name)) {
+			System.out.println("Theater name is deleted");
+			return dto;
+		}
+	}
+	return null;
+		
+	}
 }
