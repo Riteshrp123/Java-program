@@ -1,0 +1,52 @@
+1)In oops how abstraction differ from encapsulation?
+Ans-In oops abstraction is showing the essential data of the user and hide the internal data to the user.
+but encapsulation is wrapp of data and code in a single unit.
+ so that encapsulation is hide all the data to the user it private.So user can't find easily the data but in absratction so spesific data we can see.
+
+2)Difference between IS-A relation and HAS-A relation?
+Ans-
+IS-A=IS-A relation is like blood relation, attach to each one.
+we can use is-a relation in inheritance.it occurs parent class property to child class property.if it happen then is-a relation is not passible.
+HAS-A=In HAS-A relation oposite from that it is not blood relation.if one of the object is work that will be not affect to other one .
+EX-Car and driver,if car is not available driver is still exist not affect to that.
+
+3)Why java doesn't support Multiple inheritance?
+
+Ans-Java does't support multiple inheritance beacause multiple inheritance is like dimond rule ,it is one child and many parent class.
+so java does't understand how to call it and to find the perticular parent class.so it does't support multiple inheritance but
+it can possible  through interface. 
+
+7)Difference equals() method and equality operator(==)?
+Ans-equals() method is like it define the two methode is equal or not.
+eqality operators is also defind that equals of the two operators.
+
+9)Difference between private,protected,and public modifiers in java?
+
+Ans-
+private=In private modifiers in can only works within class not out side class or package.We use private only inside class of specific task.
+that is what we want to hide from others. 
+
+protected=Protected modifiers is works inside the package and subclass of a package only and inherits class .
+
+public=Public modifiers we can use any package but inside the program only,In every time in program we use  public.
+
+10)Wrapper class?
+Ans-Wrapper class is used to conver the data to the others data.
+in wrapper class there is boxing or unboxing
+
+12)Difference between heap and stack memory?
+Ans-
+Heap memory=Heap memory is store the data that is what we run in program and it store the duplicates value.
+it is working good fast.
+
+Stack memory=In stack memory we can not store any duplicates value ant it quite slow.
+
+15)Use of Final keyword  in variable,method and class?
+
+Ans-
+Final keyword=Final keyword is a constants,it restric the program to others.
+
+Variable=In variable final is to resrtic the program to do any other things.
+
+methode=In method final keyword is like to be secure the proram and not do any other things.
+
